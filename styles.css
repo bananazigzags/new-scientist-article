@@ -6,6 +6,7 @@
 
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 
 header {
     display: grid;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -53,7 +54,7 @@ header {
 }
 
 .page, nav {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     padding: 0;
     font-size: 1.15em;
@@ -82,7 +83,7 @@ h1 {
 .main-content {
     display: grid;
     gap: 20px;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 2fr;
     justify-content: center;
 }
 
@@ -157,16 +158,18 @@ ul {
 .sidebar {
     display: grid;
     gap: 5px;
-    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    grid-template-columns: 1.5fr repeat(3, minmax(50px, 1fr));
     color: black;
     font-weight: 700;
     font-size: 110%;
-    font-family: inherit;
+    font-family: Titillium Web,Helvetica,Trebuchet MS,Arial,sans-serif;
+    line-height: 120%;
 }
 
 .sidebar a {
     background-color: #f5f5f5;
-    font-size: 50%;
+    font-size: 70%;
+    padding: 10px;
 }
 
 .sidebar-heading {
@@ -177,6 +180,11 @@ ul {
     align-content: center;
     justify-content: space-between;
     padding: 5px; 
+}
+
+.selected-sidebar-link {
+    background-color: var(--light-blue) !important;
+    color: white
 }
 
 .sidebar-heading span {
@@ -194,4 +202,92 @@ ul {
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.green {
+    background-color: rgb(80, 209, 80);
+}
+
+.blue {
+    background-color: blue; 
+}
+
+.medium-blue {
+    background-color: rgb(69, 69, 228);
+}
+
+.orange {
+    background-color: orangered;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.light-blue {
+    background-color: var(--light-blue);
+}
+
+.social-new-issue {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40vh;
+    gap: 80px;
+    justify-content: space-between;
+}
+
+.social-new-issue img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.new-issue {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.new-issue-buttons {
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+}
+
+.new-issue-buttons div {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.red {
+    background-color: red;
+}
+
+.turquoise {
+    background-color: turquoise;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    max-height: 30px;
+}
+
+
+.social-circle {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+}
+
+.extra-padding-fb {
+    padding: 5px 10px;
+}
+
+.more-from-new-scientist {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 200;
 }
