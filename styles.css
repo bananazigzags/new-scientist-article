@@ -6,13 +6,22 @@
 
 * {
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
     color: var(--dark-grey);
-    font-family: "PT Serif", Georgia;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 16px;
+}
+
+article {
+    font-family: "PT Serif", Georgia;
+}
+
+.date-author {
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 80%;
+    font-size: 0.9em;
 }
 
 header {
@@ -73,11 +82,13 @@ header {
 
 h1 {
     line-height: 80%;
-    font-size: 270%;
+    font-size: 280%;
     font-weight: 700;
     color: black;
     font-family: Titillium Web, Helvetica,Trebuchet MS,Arial,sans-serif;
     letter-spacing: -.0375rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .main-content {
@@ -126,6 +137,10 @@ a {
     display: flex;
     gap: 20px;
     color: black;
+}
+
+.more-links :hover {
+    color: var(--light-blue);
 }
 
 .more-img {
@@ -184,7 +199,7 @@ ul {
 
 .selected-sidebar-link {
     background-color: var(--light-blue) !important;
-    color: white
+    color: white;
 }
 
 .sidebar-heading span {
@@ -228,6 +243,10 @@ ul {
     background-color: var(--light-blue);
 }
 
+.light-blue-font {
+    color: var(--light-blue);
+}
+
 .social-new-issue {
     display: grid;
     width: 70%;
@@ -251,7 +270,6 @@ ul {
 
 .new-issue-buttons {
     font-size: 16px;
-    font-family: 'Titillium Web', sans-serif;
     font-weight: 700;
 }
 
