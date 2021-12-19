@@ -10,16 +10,73 @@
 
 body {
     color: var(--dark-grey);
+    font-family: "PT Serif", Georgia;
+    font-size: 16px;
 }
 
-.page {
+header {
+    display: grid;
     width: 80%;
     margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+}
+ 
+.header-newsletters :first-child {
+    margin-bottom: 0;
+    color: var(--light-blue);
+}
+
+.header-newsletters :nth-child(2) {
+    margin-top: 0;
+    color: grey;
+}
+
+
+.subscribe-box {
+    display: grid;
+    justify-content: flex-end;
+    align-content: center;
+}
+
+.subscribe-box p {
+    font-family: Titillium Web;
+    font-weight: 700;
+    background-color: var(--light-blue);
+    color: white;
+    margin: 20px;
+    padding: 5px 20px;
+}
+
+.new-scientist-logo {
+    max-width: 100%;
+}
+
+.page, nav {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.15em;
+}
+
+.left-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.flex-to-end {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
 }
 
 h1 {
-    font-size: 300%;
+    line-height: 80%;
+    font-size: 270%;
+    font-weight: 700;
     color: black;
+    font-family: Titillium Web, Helvetica,Trebuchet MS,Arial,sans-serif;
+    letter-spacing: -.0375rem;
 }
 
 .main-content {
@@ -35,8 +92,29 @@ h1 {
 
 .nav ul {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     list-style-type: none;
+    padding: 0;
 }
+
+.nav ul li a {
+    padding: 7px 0;
+    font-family: Titillium Web,Helvetica,Trebuchet MS,Arial,sans-serif;
+    font-weight: 700;
+    color: var(--dark-grey);
+}
+
+.nav ul li a:hover {
+    color: var(--light-blue);
+    border-bottom: 7px solid black;
+}
+
+.selected-link {
+    color: var(--light-blue) !important;
+    border-bottom: 7px solid black;
+}
+
 
 a {
     text-decoration: none;
@@ -81,18 +159,31 @@ ul {
     gap: 5px;
     grid-template-columns: repeat(4, minmax(50px, 1fr));
     color: black;
-    font-weight: bold;
-    font-size: 120%;
+    font-weight: 700;
+    font-size: 110%;
+    font-family: inherit;
 }
 
 .sidebar a {
     background-color: #f5f5f5;
-    font-size: 60%;
+    font-size: 50%;
 }
 
 .sidebar-heading {
     grid-column: span 4;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    gap: 10px;
+    align-content: center;
+    justify-content: space-between;
     padding: 5px; 
+}
+
+.sidebar-heading span {
+    font-size: 150%;
+    color: var(--light-blue);
+    font-family: Titillium Web,Helvetica,Trebuchet MS,Arial,sans-serif;
+    font-weight: 700;
 }
 
 .sidebar div {
